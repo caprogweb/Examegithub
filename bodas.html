@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Examen de Estilo para Novias</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+
+<body> 
+    <div class="container" id="introduccion">
+        <h1>Todo sobre las Bodas</h1>
+        <p>Las bodas son eventos que celebran el amor y la unión entre dos personas. Tradicionalmente, estas ceremonias han sido una parte fundamental de muchas culturas alrededor del mundo. Desde los vestidos de novia hasta la decoración y la música, cada detalle es una expresión del estilo y los sueños de la pareja.</p>
+        <img src="E:\Programar\Examen2\image\vestido de novia.jpg" alt="Vestido de novia" class="intro-image">
+        <p>Los vestidos de novia han evolucionado a lo largo de los años, reflejando cambios en las tendencias y los gustos personales. Hoy en día, las novias pueden elegir entre una gran variedad de estilos, como el corte en A, princesa, sirena, y muchos más.</p>
+
+        <img src="E:\Programar\Examen2\image\decoracion.jpg" alt="Decoración de boda" class="intro-image">
+        <p>La decoración también juega un papel importante en la creación de una atmósfera mágica para la boda. Desde flores delicadas hasta luces suaves, todo contribuye a que el evento sea inolvidable.</p>
+        
+        <button type="button" id="empezar-cuestionario" onclick="mostrarCuestionario()">Comenzar el Cuestionario</button>
+    </div>
+
+    <div class="container" id="examen-container" style="display: none;">
+        <h1>Examen de Estilo para Novias</h1> 
+        <form id="examen"> 
+            <div class="question"> 
+                <p>1. ¿Qué tipo de escote prefieres para tu vestido de novia?</p> 
+                <label><input type="radio" name="q1" value="a"> Corazón</label> 
+                <label><input type="radio" name="q1" value="b"> Cuadrado</label> 
+                <label><input type="radio" name="q1" value="c"> En V</label> 
+                <label><input type="radio" name="q1" value="d"> Ilusión</label> 
+            </div> 
+
+            <div class="question"> 
+                <p>2. Verdadero o Falso: Los vestidos de seda deben guardarse en una funda transpirable.</p> 
+                <label><input type="radio" name="q2" value="true"> Verdadero</label> 
+                <label><input type="radio" name="q2" value="false"> Falso</label> 
+            </div> 
+
+            <div class="question"> 
+                <p>3. ¿Qué tipo de falda prefieres?</p> 
+                <label><input type="radio" name="q3" value="a"> Corte A</label> 
+                <label><input type="radio" name="q3" value="b"> Sirena</label> 
+                <label><input type="radio" name="q3" value="c"> Princesa</label> 
+                <label><input type="radio" name="q3" value="d"> Tubo</label> 
+            </div> 
+
+            <div class="question"> 
+                <p>4. Verdadero o Falso: Es mejor planchar un vestido de novia a alta temperatura.</p> 
+                <label><input type="radio" name="q4" value="true"> Verdadero</label> 
+                <label><input type="radio" name="q4" value="false"> Falso</label> 
+            </div> 
+
+            <div class="question"> 
+                <p>5. ¿En qué lugar quieres tu boda?</p> 
+                <label><input type="radio" name="q5" value="a"> Playa</label> 
+                <label><input type="radio" name="q5" value="b"> Palacio la roche</label> 
+                <label><input type="radio" name="q5" value="c"> Monterrey</label> 
+                <label><input type="radio" name="q5" value="d"> Puebla</label> 
+            </div> 
+
+            <div class="question"> 
+                <p>6. ¿Qué tipo de música prefieres para la recepción?</p> 
+                <label><input type="radio" name="q6" value="a"> Jazz suave</label> 
+                <label><input type="radio" name="q6" value="b"> Pop</label> 
+                <label><input type="radio" name="q6" value="c"> Bossa Nova</label> 
+                <label><input type="radio" name="q6" value="d"> Melodías espirituales</label> 
+            </div> 
+
+            <div class="question"> 
+                <p>7. ¿Qué tipo de invitaciones quieres enviar a los invitados?</p> 
+                <label><input type="radio" name="q7" value="a"> Física</label> 
+                <label><input type="radio" name="q7" value="b"> Digital</label> 
+            </div> 
+
+            <div class="question"> 
+                <p>8. Verdadero o Falso: La luna de miel es una tradición que se originó en la antigua Grecia.</p> 
+                <label><input type="radio" name="q8" value="a"> Verdadero</label> 
+                <label><input type="radio" name="q8" value="b"> Falso</label> 
+            </div> 
+
+            <div class="question"> 
+                <p>9. ¿Qué es lo que normalmente se intercambia durante la ceremonia de bodas?</p> 
+                <label><input type="radio" name="q9" value="a"> Anillos y votos</label> 
+                <label><input type="radio" name="q9" value="b"> Regalos y tarjetas</label> 
+                <label><input type="radio" name="q9" value="c"> Flores y chocolates</label> 
+                <label><input type="radio" name="q9" value="d"> Fotos y recuerdos</label> 
+            </div> 
+
+            <div class="question"> 
+                <p>10. Verdadero o Falso: El padrino de boda es responsable de pagar todos los gastos de la boda.</p> 
+                <label><input type="radio" name="q10" value="a"> Verdadero</label> 
+                <label><input type="radio" name="q10" value="b"> Falso</label> 
+            </div> 
+
+            <button type="button" onclick="calificar()">Enviar</button> 
+        </form> 
+        
+        <div id="resultado"></div>
+            <button type="button" onclick="regresarPrincipal()">Regresar a la página principal</button>
+            </div>  
+    </div> 
+
+    <script src="script.js"></script> 
+</body> 
+</html>
